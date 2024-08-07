@@ -8,7 +8,7 @@ const ChatbotInterface = ({
   handleChange,
 }) => {
   return (
-    <div className="w-full lg:w-3/4 h-full bg-accent mt-7 rounded-xl shadow">
+    <div className="w-full xl:w-3/4 h-full bg-accent mt-7 rounded-xl shadow">
       <div className="p-4 sm:p-7 flex flex-col">
         <h1 className="text-xl sm:text-2xl font-bold space-y-6">
           Chatbot Interface
@@ -30,7 +30,7 @@ const ChatbotInterface = ({
                 key={msg.id}
                 className={`${
                   msg.sender === "user" ? "bg-secondary self-end" : "bg-white"
-                } w-96 lg:w-max p-4 rounded-xl mt-4 max-w-md lg:max-w-lg`}
+                } w-96 xl:w-max p-4 rounded-xl mt-4 max-w-52 xl:max-w-lg`}
               >
                 <p>{msg.text}</p>
               </div>
@@ -40,7 +40,7 @@ const ChatbotInterface = ({
             <div className="w-full flex flex-col sm:flex-row justify-between items-center rounded-xl mt-4">
               <input
                 type="text"
-                className="w-full sm:w-[600px] lg:w-[800px] h-[50px] rounded-xl p-4 mb-2 sm:mb-0"
+                className="w-full sm:w-[600px] xl:w-[800px] h-[50px] rounded-xl p-4 mb-2 sm:mb-0"
                 placeholder="Type a message"
                 value={message}
                 onChange={handleChange}

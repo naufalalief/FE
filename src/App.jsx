@@ -43,8 +43,11 @@ const App = () => {
       setMessages(newMessages);
 
       const lowerCaseMessage = message.toLowerCase();
+      const faqKey = Object.keys(faqs).find((key) =>
+        key.includes(lowerCaseMessage)
+      );
       const response =
-        faqs[lowerCaseMessage] ||
+        faqs[faqKey] ||
         "Wait a minute, I will ask customer service to help you";
 
       setTimeout(() => {
@@ -79,8 +82,8 @@ const App = () => {
       </nav>
       <main>
         <section className="overflow-hidden w-full">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row gap-7 justify-between items-start">
+          <div className="container mx-auto px-4 sm:px-6 xl:px-8">
+            <div className="flex flex-col xl:flex-row gap-7 justify-between items-start">
               <ChatbotInterface
                 messages={messages}
                 handleSubmit={handleSubmit}
@@ -93,8 +96,8 @@ const App = () => {
         </section>
 
         <section className="overflow-hidden w-full mb-7">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row gap-7 justify-between items-start">
+          <div className="container mx-auto px-4 sm:px-6 xl:px-8">
+            <div className="flex flex-col xl:flex-row gap-7 justify-between items-start">
               <AddFaq
                 question={question}
                 setQuestion={setQuestion}

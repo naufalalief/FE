@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const StatItem = ({ icon, title, value }) => (
   <div className="flex space-x-3 sm:space-x-5">
@@ -59,6 +60,12 @@ const Statistics = () => {
       />
     </div>
   );
+};
+
+StatItem.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
 };
 
 export default Statistics;

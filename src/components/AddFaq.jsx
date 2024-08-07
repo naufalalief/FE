@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const AddFaq = ({
   question,
@@ -54,6 +55,14 @@ const AddFaq = ({
       </form>
     </div>
   );
+};
+
+AddFaq.propTypes = {
+  question: PropTypes.string.isRequired,
+  setQuestion: PropTypes.func.isRequired,
+  answer: PropTypes.string.isRequired,
+  setAnswer: PropTypes.func.isRequired,
+  handleFaqSubmit: PropTypes.func.isRequired,
 };
 
 export default AddFaq;

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const ChatbotInterface = ({
   messages,
@@ -24,12 +25,12 @@ const ChatbotInterface = ({
             className="flex flex-col h-[212px] overflow-y-auto px-2"
             id="box"
           >
-            {messages.map((msg, index) => (
+            {messages.map((msg) => (
               <div
-                key={index}
+                key={msg.id}
                 className={`${
                   msg.sender === "user" ? "bg-secondary self-end" : "bg-white"
-                } w-max p-4 rounded-xl mt-4 max-w-lg`}
+                } w-96 lg:w-max p-4 rounded-xl mt-4 max-w-md lg:max-w-lg`}
               >
                 <p>{msg.text}</p>
               </div>
@@ -55,6 +56,13 @@ const ChatbotInterface = ({
       </div>
     </div>
   );
+};
+
+ChatbotInterface.propTypes = {
+  messages: PropTypes.array.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  message: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default ChatbotInterface;

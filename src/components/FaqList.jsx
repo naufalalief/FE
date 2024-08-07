@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const FaqList = ({ faqs }) => {
   return (
@@ -6,14 +7,18 @@ const FaqList = ({ faqs }) => {
       <h1 className="font-bold text-center text-xl sm:text-2xl">
         Most Search FAQ (Oldest to Newest)
       </h1>
-      {Object.entries(faqs).map(([q, a], index) => (
-        <div key={index} className="flex flex-col bg-secondary p-4 rounded-xl">
+      {Object.entries(faqs).map(([q, a]) => (
+        <div key={q} className="flex flex-col bg-secondary p-4 rounded-xl">
           <h2>{q.charAt(0).toUpperCase() + q.slice(1)}</h2>
           <p>{a}</p>
         </div>
       ))}
     </div>
   );
+};
+
+FaqList.propTypes = {
+  faqs: PropTypes.object.isRequired,
 };
 
 export default FaqList;

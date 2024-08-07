@@ -7,9 +7,11 @@ const ChatbotInterface = ({
   handleChange,
 }) => {
   return (
-    <div className="w-3/4 h-full bg-accent mt-7 rounded-xl shadow">
-      <div className="p-7 flex flex-col">
-        <h1 className=" text-2xl font-bold space-y-6">Chatbot Interface</h1>
+    <div className="w-full lg:w-3/4 h-full bg-accent mt-7 rounded-xl shadow">
+      <div className="p-4 sm:p-7 flex flex-col">
+        <h1 className="text-xl sm:text-2xl font-bold space-y-6">
+          Chatbot Interface
+        </h1>
         <div className="flex flex-col bg-primary p-4 h-full mt-5 rounded-lg">
           <div className="flex justify-between items-center p-4">
             <div className="flex items-center space-x-3">
@@ -34,10 +36,10 @@ const ChatbotInterface = ({
             ))}
           </div>
           <form onSubmit={handleSubmit}>
-            <div className="w-full flex justify-between items-center rounded-xl mt-4">
+            <div className="w-full flex flex-col sm:flex-row justify-between items-center rounded-xl mt-4">
               <input
                 type="text"
-                className="w-[800px] h-[50px] rounded-xl p-4"
+                className="w-full sm:w-[600px] lg:w-[800px] h-[50px] rounded-xl p-4 mb-2 sm:mb-0"
                 placeholder="Type a message"
                 value={message}
                 onChange={handleChange}
@@ -45,7 +47,7 @@ const ChatbotInterface = ({
               <input
                 type="submit"
                 value="Send"
-                className="bg-accent text-white rounded-xl w-[80px] h-[40px] cursor-pointer hover:bg-accent/95"
+                className="bg-accent text-white rounded-xl w-full sm:w-[80px] h-[40px] cursor-pointer hover:bg-accent/95"
               />
             </div>
           </form>

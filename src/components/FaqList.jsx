@@ -2,8 +2,8 @@ import React from "react";
 
 const FaqList = ({ faqs }) => {
   return (
-    <div className="w-3/4 h-full bg-primary flex flex-col space-y-3 p-7 mt-7 rounded-xl shadow">
-      <h1 className="font-bold text-center text-2xl">
+    <div className="w-full lg:w-3/4 h-full bg-primary flex flex-col space-y-3 p-4 sm:p-7 mt-7 rounded-xl shadow">
+      <h1 className="font-bold text-center text-xl sm:text-2xl">
         Most Search FAQ (Oldest to Newest)
       </h1>
       {Object.entries(faqs).map(([q, a], index) => (

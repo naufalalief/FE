@@ -79,8 +79,8 @@ const App = () => {
       </nav>
       <main>
         <section className="overflow-hidden w-full">
-          <div className="container mx-auto">
-            <div className="flex lg:flex-row flex-col gap-7 justify-between items-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-7 justify-between items-start">
               <ChatbotInterface
                 messages={messages}
                 handleSubmit={handleSubmit}
@@ -93,8 +93,8 @@ const App = () => {
         </section>
 
         <section className="overflow-hidden w-full mb-7">
-          <div className="container mx-auto">
-            <div className="flex gap-7 justify-between items-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-7 justify-between items-start">
               <AddFaq
                 question={question}
                 setQuestion={setQuestion}

@@ -8,8 +8,8 @@ const AddFaq = ({
   handleFaqSubmit,
 }) => {
   return (
-    <div className="w-1/4 h-full bg-primary flex flex-col space-y-3 p-7 mt-7 rounded-xl shadow">
-      <h1 className="font-bold text-center text-2xl">Add FAQ</h1>
+    <div className="w-full lg:w-1/4 h-full bg-primary flex flex-col space-y-3 p-4 sm:p-7 mt-7 rounded-xl shadow">
+      <h1 className="font-bold text-center text-xl sm:text-2xl">Add FAQ</h1>
       <form className="p-4" onSubmit={handleFaqSubmit}>
         <div className="mb-4">
           <label
